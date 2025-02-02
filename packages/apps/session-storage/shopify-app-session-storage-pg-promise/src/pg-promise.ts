@@ -1,14 +1,14 @@
 import {Session} from '@shopify/shopify-api';
 import {
   SessionStorage,
-  RdbmsSessionStorageOptions,
 } from '@shopify/shopify-app-session-storage';
 import {IBaseProtocol} from 'pg-promise';
 
 import {PgPromiseConnection} from './pg-promise-connection';
 
-export interface PgPromiseSessionStorageOptions
-  extends RdbmsSessionStorageOptions {}
+export interface PgPromiseSessionStorageOptions {
+  sessionTableName: string;
+}
 
 const defaultPgPromiseSessionStorageOptions: PgPromiseSessionStorageOptions = {
   sessionTableName: 'shopify_sessions',
