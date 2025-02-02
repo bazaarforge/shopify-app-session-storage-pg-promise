@@ -327,6 +327,28 @@ importers:
         specifier: ^3.0.12
         version: link:../shopify-app-session-storage-test-utils
 
+  packages/apps/session-storage/shopify-app-session-storage-pg-promise:
+    dependencies:
+      '@shopify/shopify-api':
+        specifier: ^11.0.0
+        version: link:../../shopify-api
+      '@shopify/shopify-app-session-storage':
+        specifier: ^3.0.0
+        version: link:../shopify-app-session-storage
+      pg:
+        specifier: ^8.12.0
+        version: 8.13.1
+      pg-promise:
+        specifier: ^11.9.0
+        version: 11.10.2(pg-query-stream@4.7.1(pg@8.13.1))
+    devDependencies:
+      '@shopify/shopify-app-session-storage-test-utils':
+        specifier: ^3.0.12
+        version: link:../shopify-app-session-storage-test-utils
+      '@types/pg':
+        specifier: ^8.11.6
+        version: 8.11.10
+
   packages/apps/session-storage/shopify-app-session-storage-postgresql:
     dependencies:
       '@shopify/shopify-api':
@@ -3840,6 +3862,10 @@ packages:
   asap@2.0.6:
     resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==}
 
+  assert-options@0.8.2:
+    resolution: {integrity: sha512-XaXoMxY0zuwAb0YuZjxIm8FeWvNq0aWNIbrzHhFjme8Smxw4JlPoyrAKQ6808k5UvQdhvnWqHZCphq5mXd4TDA==}
+    engines: {node: '>=10.0.0'}
+
   ast-types-flow@0.0.8:
     resolution: {integrity: sha512-OH/2E5Fg20h2aPrbe+QL8JZQFko0YZaF+j4mnQ7BGhfavO7OpSLa8a0y9sBwomHdSbkhTS8TQNayBfnW5DwbvQ==}
 
@@ -6511,9 +6537,18 @@ packages:
   pg-connection-string@2.7.0:
     resolution: {integrity: sha512-PI2W9mv53rXJQEOb8xNR8lH7Hr+EKa6oJa38zsK0S/ky2er16ios1wLKhZyxzD7jUReiWokc9WK5nxSnC7W1TA==}
 
+  pg-cursor@2.12.1:
+    resolution: {integrity: sha512-V13tEaA9Oq1w+V6Q3UBIB/blxJrwbbr35/dY54r/86soBJ7xkP236bXaORUTVXUPt9B6Ql2BQu+uwQiuMfRVgg==}
+    peerDependencies:
+      pg: ^8
+
   pg-int8@1.0.1:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
     engines: {node: '>=4.0.0'}
+
+  pg-minify@1.6.5:
+    resolution: {integrity: sha512-u0UE8veaCnMfJmoklqneeBBopOAPG3/6DHqGVHYAhz8DkJXh9dnjPlz25fRxn4e+6XVzdOp7kau63Rp52fZ3WQ==}
+    engines: {node: '>=14.0.0'}
 
   pg-numeric@1.0.2:
     resolution: {integrity: sha512-BM/Thnrw5jm2kKLE5uJkXqqExRUY/toLHda65XgFTBTFYZyopbKjBe29Ii3RbkvlsMoFwD+tHeGaCjjv0gHlyw==}
@@ -6524,8 +6559,19 @@ packages:
     peerDependencies:
       pg: '>=8.0'
 
+  pg-promise@11.10.2:
+    resolution: {integrity: sha512-wK4yjxZdfxBmAMcs40q6IsC1SOzdLilc1yNvJqlbOjtm2syayqLDCt1JQ9lhS6yNSgVlGOQZT88yb/SADJmEBw==}
+    engines: {node: '>=14.0'}
+    peerDependencies:
+      pg-query-stream: 4.7.1
+
   pg-protocol@1.7.0:
     resolution: {integrity: sha512-hTK/mE36i8fDDhgDFjy6xNOG+LCorxLG3WO17tku+ij6sVHXh1jQUJ8hYAnRhNla4QVD2H8er/FOjc/+EgC6yQ==}
+
+  pg-query-stream@4.7.1:
+    resolution: {integrity: sha512-UMgsgn/pOIYsIifRySp59vwlpTpLADMK9HWJtq5ff0Z3MxBnPMGnCQeaQl5VuL+7ov4F96mSzIRIcz+Duo6OiQ==}
+    peerDependencies:
+      pg: ^8
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
@@ -7138,6 +7184,10 @@ packages:
 
   spawndamnit@3.0.1:
     resolution: {integrity: sha512-MmnduQUuHCoFckZoWnXsTg7JaiLBJrKFj9UI2MbRPGaJeVpsLcVBu6P/IGZovziM/YBsellCmsprgNA+w0CzVg==}
+
+  spex@3.4.0:
+    resolution: {integrity: sha512-8JeZJ7QlEBnSj1W1fKXgbB2KUPA8k4BxFMf6lZX/c1ZagU/1b9uZWZK0yD6yjfzqAIuTNG4YlRmtMpQiXuohsg==}
+    engines: {node: '>=14.0.0'}
 
   split2@4.2.0:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
@@ -11922,6 +11972,8 @@ snapshots:
 
   asap@2.0.6: {}
 
+  assert-options@0.8.2: {}
+
   ast-types-flow@0.0.8: {}
 
   astral-regex@2.0.0: {}
@@ -15079,7 +15131,13 @@ snapshots:
 
   pg-connection-string@2.7.0: {}
 
+  pg-cursor@2.12.1(pg@8.13.1):
+    dependencies:
+      pg: 8.13.1
+
   pg-int8@1.0.1: {}
+
+  pg-minify@1.6.5: {}
 
   pg-numeric@1.0.2: {}
 
@@ -15087,7 +15145,22 @@ snapshots:
     dependencies:
       pg: 8.13.1
 
+  pg-promise@11.10.2(pg-query-stream@4.7.1(pg@8.13.1)):
+    dependencies:
+      assert-options: 0.8.2
+      pg: 8.13.1
+      pg-minify: 1.6.5
+      pg-query-stream: 4.7.1(pg@8.13.1)
+      spex: 3.4.0
+    transitivePeerDependencies:
+      - pg-native
+
   pg-protocol@1.7.0: {}
+
+  pg-query-stream@4.7.1(pg@8.13.1):
+    dependencies:
+      pg: 8.13.1
+      pg-cursor: 2.12.1(pg@8.13.1)
 
   pg-types@2.2.0:
     dependencies:
@@ -15808,6 +15881,8 @@ snapshots:
     dependencies:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
+
+  spex@3.4.0: {}
 
   split2@4.2.0: {}
 
